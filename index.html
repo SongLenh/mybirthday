@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#09091b" />
+  <title>Birthday | My Life, My Code</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <div id="confetti" aria-hidden="true"></div>
+  <div class="boot" id="boot" role="dialog" aria-label="Birthday loading screen">
+    <div class="boot-box">
+      <div class="terminal-top"><span class="dots">● ● ●</span><span>Happy Birthday to ME!</span></div>
+      <div id="bootLines" class="boot-lines" aria-live="polite"></div>
+      <div class="progress"><span id="bootProgress"></span></div>
+      <button id="enterBtn" class="btn primary" hidden>ENTER THE PARTY →</button>
+      <button id="skipBtn" class="text-btn">Skip intro</button>
+    </div>
+  </div>
+
+  <header class="header">
+    <a href="#home" class="logo"><span>🎂</span>MY BIRTHDAY<span class="pink"></span></a>
+    <button id="menuToggle" class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav id="nav" class="nav" aria-label="Main navigation">
+      <a href="#home">Home</a><a href="#cake">Cake</a><a href="#memories">Memories</a><a
+        href="#countdown">Countdown</a><a href="#gift">Gift</a><a href="#wishes">Wishes</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="orb orb-one"></div>
+      <div class="orb orb-two"></div>
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="live-dot"></span> SYSTEM STATUS: CELEBRATION MODE</div>
+        <p class="code-comment">// another year, another upgrade</p>
+        <h1>HAPPY <span class="gradient-text">BIRTHDAY</span><br>TO <span class="outline-text">ME_</span></h1>
+        <p class="hero-description">New age. New dreams. New adventures. My life is a beautiful program, and today I
+          just unlocked a brand new version.</p>
+        <div class="hero-actions"><a class="btn primary" href="#cake">🎉 START CELEBRATION</a><a class="btn secondary"
+            href="#memories">VIEW MY STORY ↗</a></div>
+        <div class="hero-meta"><span>✦ Built with happiness</span><span>✦ Powered by dreams</span></div>
+      </div>
+      <div class="hero-visual" aria-label="Neon birthday cake illustration">
+        <div class="visual-ring ring-one"></div>
+        <div class="visual-ring ring-two"></div>
+        <div class="floating-code code-a">&lt;birthday /&gt;</div>
+        <div class="floating-code code-b">console.log('🎉')</div>
+        <div class="cake-art" aria-hidden="true">
+          <div class="flame hero-flame"></div>
+          <div class="candle"></div>
+          <div class="cake-top"></div>
+          <div class="cake-middle"></div>
+          <div class="cake-bottom"></div>
+          <div class="plate"></div>
+        </div>
+        <div class="visual-tag">LEVEL <span id="heroLevel">??</span> UNLOCKED ✨</div>
+      </div>
+    </section>
+
+    <section class="section level-section" id="level">
+      <div class="section-heading"><span class="section-kicker">01 // NEW ACHIEVEMENT</span>
+        <h2>LEVEL <span class="gradient-text">UP!</span></h2>
+        <p>Another chapter in the source code of my life.</p>
+      </div>
+      <div class="level-card panel">
+        <div class="level-icon">🏆</div>
+        <div class="level-info"><span class="tiny-label">ACHIEVEMENT UNLOCKED</span>
+          <h3>Version <span id="versionText">New</span> — The Next Chapter</h3>
+          <p>More wisdom. Bigger goals. Better memories.</p>
+          <div class="xp-track">
+            <div class="xp-fill"></div>
+          </div>
+          <div class="xp-caption"><span>EXPERIENCE GAINED</span><span>100% COMPLETE</span></div>
+        </div><button class="btn secondary" id="levelBtn">⚡ LEVEL UP</button>
+      </div>
+    </section>
+
+    <section class="section" id="cake">
+      <div class="section-heading"><span class="section-kicker">02 // MAKE A WISH</span>
+        <h2>THE <span class="gradient-text">BIRTHDAY CAKE</span></h2>
+        <p>Click the candle to blow it out. Click again to relight it!</p>
+      </div>
+      <div class="cake-panel panel">
+        <div class="cake-glow">
+          <div id="interactiveCake" class="cake-art big-cake" role="button" tabindex="0"
+            aria-label="Blow out or relight the birthday candle">
+            <div id="cakeFlame" class="flame"></div>
+            <div class="candle"></div>
+            <div class="cake-top"></div>
+            <div class="cake-middle"></div>
+            <div class="cake-bottom"></div>
+            <div class="plate"></div>
+          </div>
+        </div>
+        <h3 id="cakeMessage">Make a wish and blow out the candle! 🕯️</h3><button class="btn primary" id="candleBtn">💨
+          BLOW THE CANDLE</button>
+      </div>
+    </section>
+
+    <section class="section" id="memories">
+      <div class="section-heading"><span class="section-kicker">03 // MEMORY ARCHIVE</span>
+        <h2>MY <span class="gradient-text">LIFE.LOG</span></h2>
+        <p>Snapshots from the journey. This is my life style that love the travelling around this planet earth.</p>
+      </div>
+      <div class="memory-grid">
+        <article class="memory-card"><img src="assets/3.jpg" alt="Colorful birthday balloons" loading="lazy">
+          <div><span>MEMORY_001</span>
+            <h3>Celebrate Every Moment</h3>
+          </div>
+        </article>
+        <article class="memory-card"><img src="assets/2.jpg" alt="Friends enjoying a moment together" loading="lazy">
+          <div><span>MEMORY_002</span>
+            <h3>People Who Matter</h3>
+          </div>
+        </article>
+        <article class="memory-card"><img src="assets/best.jpg" alt="Concert and party lights" loading="lazy">
+          <div><span>MEMORY_003</span>
+            <h3>Unforgettable Moments</h3>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="countdown">
+      <div class="section-heading"><span class="section-kicker">04 // TIME MACHINE</span>
+        <h2>NEXT <span class="gradient-text">BIRTHDAY</span></h2>
+        <p>Every second brings another adventure closer.</p>
+      </div>
+      <div class="countdown-card panel">
+        <div class="countdown-grid">
+          <div><strong id="days">000</strong><span>DAYS</span></div>
+          <div><strong id="hours">00</strong><span>HOURS</span></div>
+          <div><strong id="minutes">00</strong><span>MINUTES</span></div>
+          <div><strong id="seconds">00</strong><span>SECONDS</span></div>
+        </div>
+        <p id="countdownNote">Configure your birthday in script.js to activate the countdown.</p>
+      </div>
+    </section>
+
+    <section class="section" id="gift">
+      <div class="section-heading"><span class="section-kicker">05 // SUPPORT MY HAPPINESS</span>
+        <h2>SEND A <span class="gradient-text">LITTLE GIFT</span></h2>
+        <p>Your birthday wishes mean the world to me. A gift is always optional! 💜</p>
+      </div>
+      <div class="gift-card panel">
+        <div class="gift-copy"><span class="gift-emoji">🎁</span>
+          <h3>Buy Me a Birthday Coffee</h3>
+          <p>Want to make my day a little sweeter? Scan my ABA PAY QR code to send a little surprise.</p>
+
+          <a href="https://link.payway.com.kh/ABAPAYrg568336E" target="_blank" rel="noopener noreferrer"
+            class="gift-button">
+
+            <span class="gift-icon">🎁</span>
+
+            <span class="gift-button-text">
+              <strong>Send Me a Birthday Gift</strong>
+              <small>Make my birthday extra special 💜</small>
+            </span>
+
+            <span class="gift-arrow">↗</span>
+
+          </a>
+
+        </div>
+        <div class="qr-box"><img id="abaQr" src="assets/qr.jpg" alt="Personal ABA PAY QR code" hidden>
+
+          <p>SCAN WITH ABA MOBILE</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="wishes">
+      <div class="section-heading"><span class="section-kicker">06 // GUESTBOOK</span>
+        <h2>LEAVE A <span class="gradient-text">WISH</span></h2>
+        <p>Drop a birthday message. Let's fill this page with good vibes!</p>
+      </div>
+      <div class="wishes-layout">
+        <form class="wish-form panel" id="wishForm"><label for="wishName">YOUR NAME</label><input id="wishName"
+            name="name" placeholder="Enter your name" maxlength="40" required><label for="wishMessage">YOUR BIRTHDAY
+            WISH</label><textarea id="wishMessage" name="message" placeholder="Write something nice..." rows="5"
+            maxlength="300" required></textarea><button class="btn primary" type="submit">💌 SEND MY
+            WISH</button><small>Wishes are saved only in this browser on this device.</small></form>
+        <div class="wish-wall panel">
+
+          <div class="wish-wall panel">
+            <div class="wish-wall-head">
+              <h3>💬 Birthday Messages</h3>
+              <span id="wishCount">0 wishes</span>
+            </div>
+
+            <div id="wishList" class="wish-list" aria-live="polite">
+            </div>
+
+            <div id="wishList" class="wish-list" aria-live="polite"></div>
+          </div>
+        </div>
+    </section>
+  </main>
+  <footer><a href="#home" class="logo">BIRTHDAY<span class="pink">GODLENH</span></a>
+    <p>Made with 💜, coffee, and a little bit of code.</p><small>© <span id="year"></span> My Birthday · All memories
+      reserved.</small>
+  </footer>
+  <script src="script.js">
+
+    document.querySelector('#clearAllWishes')
+      .addEventListener('click', () => {
+
+        const wishes = getWishes();
+
+        if (wishes.length === 0) {
+          alert('There are no wishes to delete!');
+          return;
+        }
+
+        const confirmDelete = confirm(
+          'Are you sure you want to delete ALL birthday wishes?'
+        );
+
+        if (!confirmDelete) return;
+
+        localStorage.removeItem(CONFIG.storageKey);
+
+        renderWishes();
+
+        alert('All birthday wishes have been deleted!');
+      });
+
+  </script>
+
+</body>
+
+</html>
